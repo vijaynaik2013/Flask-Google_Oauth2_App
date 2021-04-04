@@ -10,6 +10,5 @@ def login_required(f):
         # the other data for that user/check if they exist
         if user:
             return f(*args, **kwargs)
-        #return "You ain't logged in, please use url http://127.0.0.1:5000/login to get authenticated!"
-        return render_template('logout.html', user = user)
+        return render_template('login.html', user = user)
     return decorated_function
